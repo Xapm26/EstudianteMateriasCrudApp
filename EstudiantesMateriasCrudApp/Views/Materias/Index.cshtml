@@ -1,0 +1,30 @@
+﻿@model List<EstudiantesMateriasCrudApp.Domain.Models.Materia>
+
+<h2>Listado de Materias</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Código</th>
+            <th>Créditos</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var materia in Model)
+        {
+            <tr>
+                <td>@materia.Nombre</td>
+                <td>@materia.Codigo</td>
+                <td>@materia.Creditos</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@materia.Id">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@materia.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Crear Nueva Materia</a>

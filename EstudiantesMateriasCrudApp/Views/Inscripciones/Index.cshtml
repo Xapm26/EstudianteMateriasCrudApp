@@ -1,0 +1,33 @@
+﻿@model IEnumerable<EstudiantesMateriasCrudApp.Domain.Models.Inscripcion>
+
+@{
+    ViewData["Title"] = "Lista de Inscripciones";
+}
+
+<h2>Estudiantes Inscritos en Materias</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Estudiante</th>
+            <th>Correo</th>
+            <th>Materia</th>
+            <th>Código</th>
+            <th>Créditos</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var inscripcion in Model)
+        {
+            <tr>
+                <td>@inscripcion.Estudiante.Nombre</td>
+                <td>@inscripcion.Estudiante.Correo</td>
+                <td>@inscripcion.Materia.Nombre</td>
+                <td>@inscripcion.Materia.Codigo</td>
+                <td>@inscripcion.Materia.Creditos</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Inscribir Nueva Materia</a>
