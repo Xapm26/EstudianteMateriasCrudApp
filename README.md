@@ -46,10 +46,16 @@ Debes ejecutar el script `SQLQuery.sql` en el gestor de base de datos para su cr
 ##  Configurar la cadena de conexión en appsettings.json
 
 Realiza los cambios necesarios para que se conecte al servidor donde creaste la base de datos. 
+https://localhost:5001/ -> Segun configuración, seguidamente de tu ruta localhost escribe: **Inscripciones**
 
 ##  Desde la raíz del proyecto o carpeta EstudiantesMateriasCrudApp.Web
 
 dotnet run --project EstudiantesMateriasCrudApp.Web
+
+##  Ruta de ejecución 
+
+Si cuando se ejecuta la aplicación no te muestra la página principal copia esta ruta:
+
 
 ##  Ejecutar pruebas 
 
